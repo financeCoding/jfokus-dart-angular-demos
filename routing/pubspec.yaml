@@ -1,0 +1,5 @@
+name: sample_pubspec
+description: A sample application
+dependencies:
+  angular: any
+  bootstrap_for_pub: 3.1.0
