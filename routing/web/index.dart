@@ -3,7 +3,7 @@ import 'dart:html';
 
 @NgDirective(
     selector: '[current-route]'
-    )
+)
 class CurrentRoute {
   Router router;
   Element element;
