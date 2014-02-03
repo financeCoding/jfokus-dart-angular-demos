@@ -19,7 +19,7 @@ class CurrentRoute {
   bool isRoute() {
     // TODO how to tell if we're in the default route?
     if (router.activePath.isEmpty) return false; // this happens on initial load
-    return element.attributes['current-route'] == router.activePath.first.name;
+    return element.attributes['active-when-route'] == router.activePath.first.name;
   }
 
   void toggleActive() {
