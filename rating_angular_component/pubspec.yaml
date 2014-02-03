@@ -1,0 +1,7 @@
+name: ng_rating
+version: 0.0.1
+author: Tracey Powers
+description: Example of an Angular component. A rating widget with stars.
+homepage: https://github.com/angular/angular.dart.tutorial/wiki/Creating-a-Custom-Component
+dependencies:
+  angular: any

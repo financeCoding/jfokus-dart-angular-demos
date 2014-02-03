@@ -2,7 +2,7 @@ import 'package:angular/angular.dart';
 import 'dart:html';
 
 @NgDirective(
-    selector: '[current-route]'
+    selector: '[active-when-route]'
 )
 class CurrentRoute {
   Router router;
@@ -51,7 +51,6 @@ class AppRouteInitializer implements RouteInitializer {
 main() {
   ngBootstrap(module: new AngularModule()
     ..type(CurrentRoute)
-    ..type(CurrentRouteX)
     ..type(RouteInitializer, implementedBy: AppRouteInitializer)
     ..factory(NgRoutingUsePushState, (_) => new NgRoutingUsePushState.value(false))
   );
