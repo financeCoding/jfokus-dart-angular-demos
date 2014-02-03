@@ -8,8 +8,8 @@ import 'dart:mirrors';
 class Users {
   List<String> users = ['Bob', 'Alice'];
 
-  // pretend it's a network request
   Future<List<String>> getUsers() {
+    // pretend it's a network request
     return new Future.value(users);
   }
 }
