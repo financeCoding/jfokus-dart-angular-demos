@@ -12,7 +12,9 @@ class CurrentRoute {
     toggleActive();
 
     router.onRouteStart.listen((e) {
-      toggleActive();
+      e.completed.then((_) {
+          toggleActive();
+        });
     });
   }
 

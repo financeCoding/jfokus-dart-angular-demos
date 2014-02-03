@@ -41,13 +41,17 @@ class Login {
   Users users;
   String username = '';
   bool isAuthenticated = false;
+  bool checked = false;
 
   Login(this.users);
 
   void check() {
+    checked = false;
     users.getUsers().then((users) {
+      checked = true;
       isAuthenticated = users.map((u) => u.username).contains(username);
-    });
+    })
+    .catchError((e) => print("Problem checking auth: $e"));
   }
 }
 

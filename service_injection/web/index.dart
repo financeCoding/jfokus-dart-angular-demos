@@ -22,11 +22,13 @@ class Login {
   Users users;
   String username = '';
   bool isAuthenticated = false;
+  bool checked = false;
 
   Login(this.users);
 
   void check() {
     users.getUsers().then((usernames) {
+      checked = true;
       isAuthenticated = usernames.contains(username);
     });
   }
